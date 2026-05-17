@@ -1,0 +1,33 @@
+1 apple 1.1
+1 banana 2.2
+1 cherry 3.3
+1 date 4.4
+1 elder 5.5
+1 fig 6.6
+1 grape 7.7
+1 honey 8.8
+1 iris 9.9
+1 jasmin 10.1
+1 kiwi 11.2
+1 lemon 12.3
+1 mango 13.4
+1 navel 14.5
+1 olive 15.6
+1 peach 16.7
+1 quince 17.8
+1 rose 18.9
+1 sage 19.1
+1 thyme 20.2
+1 ube 21.3
+1 viola 22.4
+1 walnut 23.5
+3
+4 apple
+4 mango
+4 zzz
+2 cherry
+2 honey
+3
+4 apple
+2 zzz
+1 apple 99.9

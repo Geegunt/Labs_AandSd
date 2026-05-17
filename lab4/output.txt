@@ -1,0 +1,131 @@
+1 apple 1.1
+Добавлен: apple = 1.1
+
+1 banana 2.2
+Добавлен: banana = 2.2
+
+1 cherry 3.3
+Добавлен: cherry = 3.3
+
+1 date 4.4
+Добавлен: date = 4.4
+
+1 elder 5.5
+Добавлен: elder = 5.5
+
+1 fig 6.6
+Добавлен: fig = 6.6
+
+1 grape 7.7
+Добавлен: grape = 7.7
+
+1 honey 8.8
+Добавлен: honey = 8.8
+
+1 iris 9.9
+Добавлен: iris = 9.9
+
+1 jasmin 10.1
+Добавлен: jasmin = 10.1
+
+1 kiwi 11.2
+Добавлен: kiwi = 11.2
+
+1 lemon 12.3
+Добавлен: lemon = 12.3
+
+1 mango 13.4
+Добавлен: mango = 13.4
+
+1 navel 14.5
+Добавлен: navel = 14.5
+
+1 olive 15.6
+Добавлен: olive = 15.6
+
+1 peach 16.7
+Добавлен: peach = 16.7
+
+1 quince 17.8
+Добавлен: quince = 17.8
+
+1 rose 18.9
+Добавлен: rose = 18.9
+
+1 sage 19.1
+Добавлен: sage = 19.1
+
+1 thyme 20.2
+Добавлен: thyme = 20.2
+
+1 ube 21.3
+Добавлен: ube = 21.3
+
+1 viola 22.4
+Добавлен: viola = 22.4
+
+1 walnut 23.5
+Добавлен: walnut = 23.5
+
+3
+[honey:8.8]
+    [date:4.4]
+        [banana:2.2]
+            [apple:1.1]
+            [cherry:3.3]
+        [fig:6.6]
+            [elder:5.5]
+            [grape:7.7]
+    [lemon:12.3 | peach:16.7]
+        [jasmin:10.1]
+            [iris:9.9]
+            [kiwi:11.2]
+        [navel:14.5]
+            [mango:13.4]
+            [olive:15.6]
+        [rose:18.9 | thyme:20.2]
+            [quince:17.8]
+            [sage:19.1]
+            [ube:21.3 | viola:22.4 | walnut:23.5]
+
+4 apple
+apple = 1.1
+
+4 mango
+mango = 13.4
+
+4 zzz
+Ключ 'zzz' не найден
+
+2 cherry
+Удалён: cherry
+
+2 honey
+Удалён: honey
+
+3
+[grape:7.7 | lemon:12.3 | peach:16.7]
+    [banana:2.2 | elder:5.5]
+        [apple:1.1]
+        [date:4.4]
+        [fig:6.6]
+    [jasmin:10.1]
+        [iris:9.9]
+        [kiwi:11.2]
+    [navel:14.5]
+        [mango:13.4]
+        [olive:15.6]
+    [rose:18.9 | thyme:20.2]
+        [quince:17.8]
+        [sage:19.1]
+        [ube:21.3 | viola:22.4 | walnut:23.5]
+
+4 apple
+apple = 1.1
+
+2 zzz
+Ошибка: ключ 'zzz' не найден
+
+1 apple 99.9
+Ошибка: ключ 'apple' уже существует
+
