@@ -306,19 +306,35 @@ int btree_delete(BTree *tree, const char *key) {
     return result;
 }
 
-static void print_node(const BTreeNode *node, int level, FILE *out) {
+static void print_node(const BTreeNode *node, int level,
+                        const char *lo, const char *hi, FILE *out) {
     if (!node) return;
+
     for (int i = 0; i < level * 4; i++)
         fprintf(out, " ");
+
+    if (level > 0) {
+        if (!lo && hi)
+            fprintf(out, "(<%s) ", hi);
+        else if (lo && !hi)
+            fprintf(out, "(>%s) ", lo);
+        else
+            fprintf(out, "(%s..%s) ", lo, hi);
+    }
+
     fprintf(out, "[");
     for (int i = 0; i < node->n; i++) {
         if (i > 0) fprintf(out, " | ");
         fprintf(out, "%s:%.6g", node->keys[i], node->values[i]);
     }
     fprintf(out, "]\n");
+
     if (!node->leaf) {
-        for (int i = 0; i <= node->n; i++)
-            print_node(node->children[i], level + 1, out);
+        for (int i = 0; i <= node->n; i++) {
+            const char *child_lo = (i > 0)        ? node->keys[i - 1] : NULL;
+            const char *child_hi = (i < node->n)  ? node->keys[i]     : NULL;
+            print_node(node->children[i], level + 1, child_lo, child_hi, out);
+        }
     }
 }
 
@@ -327,5 +343,5 @@ void btree_print(const BTree *tree, FILE *out) {
         fprintf(out, "Дерево пусто.\n");
         return;
     }
-    print_node(tree->root, 0, out);
+    print_node(tree->root, 0, NULL, NULL, out);
 }
