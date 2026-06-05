@@ -12,10 +12,10 @@ Graph *graph_create(int V) {
     g->V = V;
     g->E = 0;
     g->capacity = 16;
-    g->src    = (int *)malloc(g->capacity * sizeof(int));
-    g->dst    = (int *)malloc(g->capacity * sizeof(int));
+    g->src = (int *)malloc(g->capacity * sizeof(int));
+    g->dst = (int *)malloc(g->capacity * sizeof(int));
     g->weight = (double *)malloc(g->capacity * sizeof(double));
-    g->inc    = (double *)calloc((size_t)V * g->capacity, sizeof(double));
+    g->inc = (double *)calloc((size_t)V * g->capacity, sizeof(double));
 
     if (!g->src || !g->dst || !g->weight || !g->inc) {
         graph_free(g);
